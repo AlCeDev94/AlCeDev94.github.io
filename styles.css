@@ -1,0 +1,121 @@
+/* Stile generale */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0047ab;
+    color: #222222;
+}
+
+/* Cards */
+.card {
+    transition: 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.orange-detail {
+    color: #DF7925;
+}
+
+.project-card {
+    background-color: #d5a379;
+}
+
+.light-orange-detail {
+    background-color: #ffe4d6;
+}
+
+.titles-size {
+    font-weight: 900;
+    font-size: 5.5rem;
+}
+
+/* to fix */
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+@media (min-width:769px) {
+    .blocked-overflow {
+        position: sticky;
+        top: 20px;
+        height: fit-content;
+    }
+}
+
+.custom-rounded-left {
+    border-radius: 15px 0px 0px 15px;
+}
+.custom-rounded-right {
+    border-radius: 0px 15px 15px 0px;
+}
+
+/* Footer */
+.footer {
+    background: #222222;
+    color: white;
+}
+
+
+@media (max-width: 991px) { /* Tablet */
+
+.custom-rounded {
+    border-radius: 15px;
+}
+
+    .display-3 {
+        font-size: 3.5rem;
+    }
+
+    .display-4 {
+        font-size: 3rem;
+    }
+
+    .btn-group {
+        display: flex;
+        justify-content: center;
+    }
+
+    .row.text-white {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .col-md-3 {
+        width: 80%; /* Rende i blocchi più leggibili su tablet */
+        margin: 0 auto;
+    }
+
+    .card-img-top {
+        max-width: 200px; /* Riduce le immagini grandi */
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .display-3 {
+        font-size: 2.5rem; /* Riduce i titoli su mobile */
+    }
+
+    .display-4 {
+        font-size: 2.2rem;
+    }
+
+    .btn-group {
+        display: flex;
+        justify-content: center;
+    }
+
+    .row.text-white {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .col-md-3 {
+        width: 90%; /* Rende i blocchi di statistiche più leggibili */
+        margin: 0 auto;
+    }
+}
