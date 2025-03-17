@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("Il portfolio è pronto!");
+    console.log("Portfolio is ready!");
+    include("base/header.html", "header");
+    include("base/footer.html", "footer");
+    include("base/work-in-progress-card.html", "work-card");
     
     // Smooth scrolling effect
     document.querySelectorAll('a.nav-link').forEach(anchor => {
@@ -34,3 +37,17 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 500);
     });
 });
+
+// Simulate DJango 'include' feature
+function include(file, elementId) {
+    // Fetch to upload HTML file
+    fetch(file)
+        .then(response => response.text())  // Get content from file
+        .then(data => {
+            // Insert content in selected div
+            document.getElementById(elementId).innerHTML = data;
+        })
+        .catch(error => {
+            console.error("Error loading file:", error);
+        });
+}

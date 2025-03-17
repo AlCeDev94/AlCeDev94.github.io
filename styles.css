@@ -1,4 +1,4 @@
-/* Stile generale */
+/* General style */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #0047ab;
@@ -11,6 +11,12 @@ body {
     background-attachment: fixed;
 }
 
+.header-buttons {
+    position: sticky;
+    top: 10px;
+    height: fit-content;
+    z-index:99;
+}
 
 /* Cards */
 .card {
@@ -26,6 +32,9 @@ body {
 }
 .grey-bg-detail {
     background-color:rgba(125, 125, 125, 0.5);;
+}
+.dark-grey-bg-detail {
+    background-color:rgba(24, 24, 24, 0.85);;
 }
 
 .project-card {
