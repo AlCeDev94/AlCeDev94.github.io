@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let message = document.getElementById("messageInput").value;
 
         // Light security check, obfuscation - not having backend to do so - btw it doesn't worth it to stole it
-        let user = "aleandrocerutipro";
+        let user = "alceblockdev";
         let domain = "gmail.com";
         let recipient = user + "@" + domain;
             
