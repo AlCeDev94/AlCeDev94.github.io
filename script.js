@@ -1,8 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
     console.log("Portfolio is ready!");
-    include("base/header.html", "header");
-    include("base/footer.html", "footer");
-    include("base/work-in-progress-card.html", "work-card");
+    
+    // Includes
+    include("../base/header.html", "header");
+    include("../base/footer.html", "footer");
+    include("../base/work-in-progress-card.html", "work-card");
+
     
     // Smooth scrolling effect
     document.querySelectorAll('a.nav-link').forEach(anchor => {

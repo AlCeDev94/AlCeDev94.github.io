@@ -30,14 +30,20 @@ body {
 .orange-detail {
     color: #DF7925;
 }
+.white-bg-detail {
+    background-color:rgba(238, 236, 236, 0.85);;
+}
 .grey-bg-detail {
     background-color:rgba(125, 125, 125, 0.5);;
 }
 .dark-grey-bg-detail {
     background-color:rgba(24, 24, 24, 0.85);;
 }
+.black-bg-detail {
+    background-color:rgba(21, 21, 21, 0.5);;
+}
 
-.project-card {
+.project-card-colors {
     background-color: #d5a379;
 }
 
@@ -74,6 +80,7 @@ body {
 .custom-rounded-equal {
     border-radius: 15px;
 }
+
 
 /* Footer */
 .footer {
