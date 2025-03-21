@@ -12,12 +12,112 @@
 <body>
     <div id="header" class="header-buttons"></div>
 
-    <div id="work-card"></div>
+    <div class="row d-flex justify-content-center mt-3 mb-5">
+        <div class="col-12 col-md-9">
+            <div class="card mb-3 medium-orange-detail p-3">
+                <div class="row g-0 align-items-center">
+                    <div class="col-12 text-md-start text-center px-3">
+                        <div class="card-body">
+                            <div class="row">
+                                <h2 class="col-8 card-title">My working experience</h2>
+                                <div class="col-4 d-flex justify-content-center">
+                                    <a href="certifications/certifications.html" rel="noopener noreferrer">
+                                        <button type="button" class="btn btn-light btn-lg btn-block light-orange-detail">
+                                            <div class="row d-flex justify-content-center px-4">
+                                                <div class="col-10">
+                                                    <div>Certifications</div>
+                                                </div>
+                                                <div class="col-2 d-flex justify-content-center align-items-center">
+                                                    <i class="bi bi-arrow-right-circle"></i>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-center mt-4">
+                                <div class="col-4">
+                                    <h3 class="card-title">Freelance Blockchain Developer</h3>
+                                </div>
+                                <div class="col-8">
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="col d-flex flex-wrap gap-1">
+                                <!-- included with script, bottom page -->
+                                <div id="solidity-btn" class="solidity-btn py-2 px-2"></div>
+                                <div id="javascript-btn-0" class="javascript-btn py-2 px-2"></div>
+                                <div id="hardhat-btn" class="hardhat-btn py-2 px-2"></div>
+                                <div id="ethersjs-btn" class="ethersjs-btn py-2 px-2"></div>
+                                <div id="react-btn" class="react-btn py-2 px-2"></div>
+                                <div id="metamask-btn" class="metamask-btn py-2 px-2"></div>
+                            </div>
+                            <p class="card-text mt-3">
+                                Mar 2023- ongoing
+                            </p>
+                            <p class="card-text fs-5">
+                                Web 3.0 RealEstate Marketplace. A simplified version can be seen as project on this website.
+                            </p>
+                            <div class="row d-flex justify-content-center mt-4">
+                                <div class="col-4">
+                                    <h3 class="card-title">Full Stack Developer</h3>
+                                </div>
+                                <div class="col-8">
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="col d-flex flex-wrap gap-1">
+                                <div id="python-btn" class="python-btn py-2 px-2"></div>
+                                <div id="javascript-btn-1" class="javascript-btn py-2 px-2"></div>
+                                <div id="golang-btn" class="golang-btn py-2 px-2"></div>
+                                <div id="django-btn" class="django-btn py-2 px-2"></div>
+                                <div id="awss3-btn" class="awss3-btn py-2 px-2"></div>
+                            </div>
+                            <p class="card-text mt-3">
+                                Feb 2021 - Aug 2022 at HiWay Media - startup, Milan
+                            </p>
+                            <p class="card-text fs-5">
+                                Main tasks of the role:<br>
+                                <ul>
+                                    <li>Developed front-end and back-end for dashboards and internal software and APIs for OTT platforms, websites (always with an eye on UX/UI, database and more).</li>
+                                    <li>Led project development of media-website (dashboard, website and S3) discussing directly with the client features and releases.</li>
+                                </ul>
+                            </p>
+                            <p class="card-text fs-5">
+                                Goals achieved:<br>
+                                <ul>
+                                    <li>Co-worked (design and code) on a new version of the main management dashboard that led to incorporate seven different dashboards into a simpler single one thanks to dynamic APIs.</li>
+                                    <li>Designed and coded an internal software that saved the project manager 250 hrs/year* in preparing reports and sending them to clients.</li>
+                                </ul>
+                            </p>
+                            <p class="card-text">
+                                * estimation calculated at the company
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div id="footer" class="footer"></div>
 
         
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
+
+    <script>
+        includeElement("components.html", ".solidity-btn", "solidity-btn");
+        includeElement("components.html", ".javascript-btn", "javascript-btn-0");
+        includeElement("components.html", ".javascript-btn", "javascript-btn-1");
+        includeElement("components.html", ".hardhat-btn", "hardhat-btn");
+        includeElement("components.html", ".ethersjs-btn", "ethersjs-btn");
+        includeElement("components.html", ".react-btn", "react-btn");
+        includeElement("components.html", ".metamask-btn", "metamask-btn");
+        includeElement("components.html", ".python-btn", "python-btn");
+        includeElement("components.html", ".golang-btn", "golang-btn");
+        includeElement("components.html", ".django-btn", "django-btn");
+        includeElement("components.html", ".awss3-btn", "awss3-btn");
+    </script>
 </body>
 </html>

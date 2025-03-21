@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// Simulate DJango 'include' feature
+// Inspired by DJango 'include' feature
 function include(file, elementId) {
     // Fetch to upload HTML file
     fetch(file)
@@ -54,3 +54,28 @@ function include(file, elementId) {
             console.error("Error loading file:", error);
         });
 }
+// 'Include' version to catch specific HTML elements by their class and assign them by their id
+function includeElement(file, elementClass, targetId) {
+    fetch(file)
+        .then(response => response.text())  
+        .then(data => {
+            let parser = new DOMParser();
+            let doc = parser.parseFromString(data, "text/html");
+
+            let elementToInclude = doc.querySelector(elementClass);
+
+            if (elementToInclude) {
+                // Rimuove eventuali script dal contenuto incluso
+                let clonedContent = elementToInclude.cloneNode(true);
+                clonedContent.querySelectorAll("script").forEach(script => script.remove());
+
+                document.getElementById(targetId).innerHTML = clonedContent.innerHTML;
+            } else {
+                console.error("Elemento with class '" + elementClass + "' not found in " + file);
+            }
+        })
+        .catch(error => {
+            console.error("Errore nel caricamento del file:", error);
+        });
+}
+
