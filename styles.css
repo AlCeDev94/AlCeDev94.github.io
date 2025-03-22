@@ -139,10 +139,6 @@ body {
         max-width: 200px;
         margin: 0 auto;
     }
-
-    .cert-work-limit {
-        min-width: 400px;
-    }
 }
 
 @media (max-width: 768px) {
