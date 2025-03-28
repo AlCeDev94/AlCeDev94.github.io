@@ -22,21 +22,12 @@
             <section class="container">
                 <div id="left-card-projects"></div>
             </section>
-            <!-- labels? problema che non sarebbero quelle del progetto specifico --- posso provare a farle sticky in parallelo, ossia fino a quando certa sezione rimane questo poi passa al successivo , stile sidebar? -->
-            <div class="col-12 d-flex justify-content-center gap-1">
-                <div id="solidity-btn-0"></div>
-                <div id="javascript-btn-0"></div>
-                <div id="react-btn-0"></div>
-                <div id="ethersjs-btn-0"></div>
-                <div id="hardhat-btn-0"></div>
-            </div>
          </div>
      
          <!-- right column -->
          <div class="col-12 col-md-7 px-5">
-            <section>Intro page bla bla</section>
             <section id="project-1" class="mt-5">
-                <h4>BlockRent</h4>
+                <h4 class=" lighter-white">BlockRent</h4>
                 <div class="row py-3 d-flex justify-content-center">
                     <div class="col-12 dark-grey-bg-detail p-3 custom-rounded-equal">
                         <div class="row py-2">
@@ -53,8 +44,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">video player</div>
-                <div class="row">more details con labels (se non posso metterle a lato)
+                <div class="row my-4"><span> &#x1F6A7; A video player with a project's preview is coming soon...</span></div>
+                <div class="row">
                     <p class="card-text fs-5">This project is a Real Estate NFT DApp that enables 
                         users to buy houses on the blockchain and manage them as NFTs stored in IPFS (InterPlanetary File System).</p>
                     <p class="card-text fs-5">The project utilizes two IERC-721 smart contracts: one to manage minting and total supply, and the other one to handle all additional functions.</p>
@@ -62,10 +53,50 @@
                 </div>
             </section>
             <section id="project-2" class="mt-5">
-                <h4>Project2</h4>
+                <h4 class=" lighter-white">Project2</h4>
+                <div class="row py-3 d-flex justify-content-center">
+                    <div class="col-12 dark-grey-bg-detail p-3 custom-rounded-equal">
+                        <div class="row py-2">
+                            <div class="col-9 d-flex align-items-center">
+                                <p class="card-text fs-5">Click on the GitHub logo to be redirected to the project's code!</p>
+                            </div>
+                            <div class="col-3 d-flex justify-content-center" style="height: 50px;">
+                                <a href="" target="_blank" rel="noopener noreferrer">
+                                    <button type="button" class="btn btn-outline-primary rounded-circle m-1">
+                                        <i class="bi bi-github fs-3"></i>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4"><span> &#x1F6A7; A video player with a project's preview is coming soon...</span></div>
+                <div class="row">
+                    <p class="card-text fs-5">Lorem ipsum coming soon...  
+                </div>
             </section>
-            <section id="project-3" class="mt-5">
-                <h4>Project3</h4>
+            <section id="project-3" class="mt-5 mb-5">
+                <h4 class=" lighter-white">Project3</h4>
+                <div class="row py-3 d-flex justify-content-center">
+                    <div class="col-12 dark-grey-bg-detail p-3 custom-rounded-equal">
+                        <div class="row py-2">
+                            <div class="col-9 d-flex align-items-center">
+                                <p class="card-text fs-5">Click on the GitHub logo to be redirected to the project's code!</p>
+                            </div>
+                            <div class="col-3 d-flex justify-content-center" style="height: 50px;">
+                                <a href="" target="_blank" rel="noopener noreferrer">
+                                    <button type="button" class="btn btn-outline-primary rounded-circle m-1">
+                                        <i class="bi bi-github fs-3"></i>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4"><span> &#x1F6A7; A video player with a project's preview is coming soon...</span></div>
+                <div class="row">
+                    <p class="card-text fs-5">Lorem ipsum coming soon... 
+                </div>
             </section>
         </div>
      </div>
@@ -86,21 +117,31 @@
 
         includeElement("home-skills.html", ".home-skills", "home-skills");
 
-        includeElement("components.html", ".solidity-btn", "solidity-btn-0");
-        includeElement("components.html", ".javascript-btn", "javascript-btn-0");
-        includeElement("components.html", ".react-btn", "react-btn-0");
-        includeElement("components.html", ".ethersjs-btn", "ethersjs-btn-0");
-        includeElement("components.html", ".hardhat-btn", "hardhat-btn-0");
-
         /* in this section includeElement of included section */
         /* example: */
         /* Home work-experience section <- html from work-experience page [includeElement first time] */
         /* html from work-experience page [includeElement first time] <- skills btn (from components page)  [includeElement second time] */
         /* TO DO: simplify includeElement function like allowing arrays of key-value instead of one by one */
         document.addEventListener("DOMContentLoaded", function () {
-            /* ... */
+            /* left-cards.html */
+            includeElement("components.html", ".solidity-btn", "solidity-btn-0");
+            includeElement("components.html", ".javascript-btn", "javascript-btn-0");
+            includeElement("components.html", ".react-btn", "react-btn-0");
+            includeElement("components.html", ".ethersjs-btn", "ethersjs-btn-0");
+            includeElement("components.html", ".hardhat-btn", "hardhat-btn-0");
+
+            includeElement("components.html", ".solidity-btn", "solidity-btn-1");
+            includeElement("components.html", ".javascript-btn", "javascript-btn-1");
+
+            includeElement("components.html", ".solidity-btn", "solidity-btn-2");
+            includeElement("components.html", ".javascript-btn", "javascript-btn-2");
+
+            /* scrolling highlight left col */
+            scrollHighlight("project-1","pj1","highlight-on-scrolling")
+            scrollHighlight("project-2","pj2","highlight-on-scrolling")
+            scrollHighlight("project-3","pj3","highlight-on-scrolling")            
         });
-            
+
     </script>
 </body>
 </html>

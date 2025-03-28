@@ -71,7 +71,6 @@ function includeElement(file, elementClass, targetId) {
                 clonedContent.querySelectorAll("script").forEach(script => script.remove());
 
                 document.getElementById(targetId).innerHTML = clonedContent.innerHTML;
-                console.log("elementClass >> ",elementClass)
             } else {
                 console.error("Elemento with class '" + elementClass + "' not found in " + file);
             }
@@ -79,6 +78,31 @@ function includeElement(file, elementClass, targetId) {
         .catch(error => {
             console.error("Errore nel caricamento del file:", error);
         });
+}
+
+/* Function to add class to selected element when scrolling over a target element */
+function scrollHighlight(targetId,affectedId,classSelected) {
+    /* IF is needed to check that imported ids have already been uploaded, avoiding to use a loop or unprecise setTimeout */
+    if (document.getElementById(targetId) && document.getElementById(affectedId)) {
+        const targetSection = document.getElementById(targetId);
+        const affectedSection = document.getElementById(affectedId);
+    
+        function checkScroll() {
+            const rect = targetSection.getBoundingClientRect();
+
+            if (rect.top <= window.innerHeight * 0.55 && rect.bottom >= window.innerHeight * 0.55) {
+                if (!affectedSection.className.includes(classSelected)) {
+                    affectedSection.className += " " + classSelected;
+                }
+            } else {
+                affectedSection.classList.remove(classSelected);
+            }
+        }
+    
+        window.addEventListener("scroll", checkScroll);
+    } else {
+        setTimeout(()=>{  scrollHighlight(targetId,affectedId,classSelected)  },100)
+    }
 }
 
 function testCalling(){

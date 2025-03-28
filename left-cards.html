@@ -1,4 +1,4 @@
-<!-- Left Card Home -->
+<!-- Left Card HOME -->
 <section class="left-card-home text-center d-flex justify-content-between">
     <div class="row">
         <div class="card-body text-center">
@@ -9,32 +9,122 @@
     </div>
     <div class="row mt-5 mb-5">
         <div class="btn-group-vertical" role="group" aria-label="Basic example">
-            <a href="#home-general-about">
+            <a href="#home-general-about" id="left-home-general" class="translate-right">
                 <button type="button" class="btn btn-sidebar lighter-grey">About</button>
             </a>
-            <a href="#work-experience">
+            <a href="#work-experience" id="left-work-experience">
                 <button type="button" class="btn btn-sidebar lighter-grey">Work</button>
             </a>
-            <a href="#home-projects">
+            <a href="#home-projects" id="left-home-projects">
                 <button type="button" class="btn btn-sidebar lighter-grey">Projects</button>
             </a>
-            <a href="#home-certifications">
+            <a href="#home-certifications" id="left-home-certifications">
                 <button type="button" class="btn btn-sidebar lighter-grey">Certifications</button>
             </a>
-            <a href="#contact-me">
+            <a href="#contact-me" id="left-home-contact">
                 <button type="button" class="btn btn-sidebar lighter-grey">Contact me</button>
             </a>
         </div>
     </div>
 </section>
 
-<!-- Left Card Projects -->
+<!-- Left Card PROJECTS -->
 <section class="left-card-projects text-center d-flex justify-content-between">
-    <div class="row">
-        <div class="card-body text-center">
-            <h2 class="fw-bold lighter-white ">Project1</h2>
-            <h3 class="fw-bold lighter-white ">a bit more</h3>
-            <p class="card-text mb-3 fs-5">details</p>
-        </div>
+    <div id="pj1" class="row project-cards highlight-on-scrolling py-3 mb-5">
+        <a href="project-base.html#project-1">
+            <div class="card-body text-center">
+                <h3 class="fw-bold lighter-white ">BlockRent</h3>
+                <p class="card-text mb-3 fs-5">Web 3.0 RealEstate Marketplace allowing to buy and sell properties to on blockchain.</p>
+            </div>
+            <!-- labels? problema che non sarebbero quelle del progetto specifico --- posso provare a farle sticky in parallelo, ossia fino a quando certa sezione rimane questo poi passa al successivo , stile sidebar? -->
+            <div class="col-12 d-flex flex-wrap overflow-hidden justify-content-center gap-1">
+                <div id="solidity-btn-0"></div>
+                <div id="javascript-btn-0"></div>
+                <div id="react-btn-0"></div>
+                <div id="ethersjs-btn-0"></div>
+                <div id="hardhat-btn-0"></div>
+            </div>
+        </a>
     </div>
+    <div id="pj2" class="row project-cards py-3 mb-5">
+        <a href="project-base.html#project-2">
+            <div class="card-body text-center">
+                <h3 class="fw-bold lighter-white ">Project2</h3>
+                <p class="card-text mb-3 fs-5">details</p>
+            </div>
+            <!-- labels? problema che non sarebbero quelle del progetto specifico --- posso provare a farle sticky in parallelo, ossia fino a quando certa sezione rimane questo poi passa al successivo , stile sidebar? -->
+            <div class="col-12 d-flex flex-wrap overflow-hidden justify-content-center gap-1">
+                <div id="solidity-btn-1"></div>
+                <div id="javascript-btn-1"></div>
+            </div>
+        </a>
+    </div>
+    <div id="pj3" class="row project-cards py-3">
+        <a href="project-base.html#project-3">
+            <div class="card-body text-center">
+                <h3 class="fw-bold lighter-white ">Project3</h3>
+                <p class="card-text mb-3 fs-5">details</p>
+            </div>
+            <!-- labels? problema che non sarebbero quelle del progetto specifico --- posso provare a farle sticky in parallelo, ossia fino a quando certa sezione rimane questo poi passa al successivo , stile sidebar? -->
+            <div class="col-12 d-flex flex-wrap overflow-hidden justify-content-center gap-1">
+                <div id="solidity-btn-2"></div>
+                <div id="javascript-btn-2"></div>
+            </div>
+        </a>
+    </div>
+</section>
+
+
+<!-- into project-base.html
+<script>
+    includeElement("components.html", ".solidity-btn", "solidity-btn-0");
+    includeElement("components.html", ".javascript-btn", "javascript-btn-0");
+    includeElement("components.html", ".react-btn", "react-btn-0");
+    includeElement("components.html", ".ethersjs-btn", "ethersjs-btn-0");
+    includeElement("components.html", ".hardhat-btn", "hardhat-btn-0");
+
+    includeElement("components.html", ".solidity-btn", "solidity-btn-1");
+    includeElement("components.html", ".javascript-btn", "javascript-btn-1");
+
+    includeElement("components.html", ".solidity-btn", "solidity-btn-2");
+    includeElement("components.html", ".javascript-btn", "javascript-btn-2");
+</script> -->
+
+
+
+<!-- Left Card CERTIFICATIONS -->
+<section class="left-card-certifications text-center d-flex justify-content-between">
+    <div id="cert1" class="row project-cards highlight-on-scrolling py-3 mb-5">
+        <a href="certifications-base.html#certification-1">
+            <div class="card-body text-center">
+                <img class="card-img-certifications rounded img-fluid mb-3" src="certifications-media/BlockchainExpert_Certificate_page-0001.jpg" alt="Profile Pic">
+                <h4 class="fw-bold lighter-white ">Blockchain Expert</h4>
+            </div>
+        </a>
+    </div>
+    <div id="cert2" class="row project-cards py-3 mb-5">
+        <a href="certifications-base.html#certification-2">
+            <div class="card-body text-center">
+                <img class="card-img-certifications rounded img-fluid mb-3" src="certifications-media/web3-masterclass-blockchain-dapps-daos-more_page-0001.jpg" alt="Profile Pic">
+                <h4 class="fw-bold lighter-white ">Web3 Masterclass: Blockchain, DApps, DAOs +More</h4>
+            </div>
+        </a>
+    </div>
+    <div id="cert3" class="row project-cards py-3 mb-5">
+        <a href="certifications-base.html#certification-3">
+            <div class="card-body text-center">
+                <img class="card-img-certifications rounded img-fluid mb-3" src="certifications-media/solidity-ethereum-and-blockchain-the-complete-developer-s-guide_page-0001.jpg" alt="Profile Pic">
+                <h4 class="fw-bold lighter-white ">Solidity, Ethereum and Blockchain: The Complete Developer's Guide</h4>
+            </div>
+        </a>
+    </div>
+    <div id="cert4" class="row project-cards py-3 mb-5">
+        <a href="certifications-base.html#certification-4">
+            <div class="card-body text-center">
+                <img class="card-img-certifications rounded img-fluid mb-3" src="certifications-media/data-structures-and-algorithms_page-0001.jpg" alt="Profile Pic">
+                <h4 class="fw-bold lighter-white ">Data Structure and Algorithms</h4>
+            </div>
+        </a>
+    </div>
+
 </section>

@@ -29,31 +29,31 @@
          </div>
      
          <!-- right column -->
-         <div class="col-12 col-md-7 px-5">
+         <div class="col-12 col-md-7 px-5 py-4">
             <!-- home general -->
-            <section class="container mb-5">
+            <section id="home-general-section" class="container mb-5">
                 <div id="home-general-about" class="col-12"></div>
             </section>
 
 
 
             <!-- home working experience -->
-            <section class="container mb-5">
+            <section id="work-index-section" class="container mb-5">
                 <div id="work-experience"></div>
             </section>
 
             <!-- home projects -->
-            <section class="container mb-5">
+            <section id="home-projects-section" class="container mb-5">
                 <div id="home-projects"></div>
             </section>
 
             <!-- home certifications -->
-            <section class="container mb-5">
+            <section id="home-certifications-section" class="container mb-5">
                 <div id="home-certifications"></div>
             </section>
 
             <!-- home contact me -->
-            <section class="container mb-5">
+            <section id="home-contact-section" class="container mb-5">
                 <div id="contact-me"></div>
             </section>
          </div>
@@ -99,6 +99,14 @@
             includeElement("components.html", ".javascript-btn", "javascript-btn-1");
             includeElement("components.html", ".golang-btn", "golang-btn-1");
             includeElement("components.html", ".awss3-btn", "awss3-btn-1");
+
+            /* sidebar highlight */
+            scrollHighlight("home-general-section","left-home-general","translate-right");
+            scrollHighlight("work-index-section","left-work-experience","translate-right");
+            scrollHighlight("home-projects-section","left-home-projects","translate-right");
+            scrollHighlight("home-certifications-section","left-home-certifications","translate-right");
+            scrollHighlight("home-contact-section","left-home-contact","translate-right");
+
         });
             
     </script>
