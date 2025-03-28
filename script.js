@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log("Portfolio is ready!");
     
     // Includes
-    include("../base/header.html", "header");
-    include("../base/footer.html", "footer");
-    include("../base/work-in-progress-card.html", "work-card");
+    include("../header.html", "header");
+    include("../footer.html", "footer");
+    include("../work-in-progress-card.html", "work-card");
 
     
     // Smooth scrolling effect
@@ -56,6 +56,7 @@ function include(file, elementId) {
 }
 // 'Include' version to catch specific HTML elements by their class and assign them by their id
 function includeElement(file, elementClass, targetId) {
+    console.log("file >> ",file)
     fetch(file)
         .then(response => response.text())  
         .then(data => {
@@ -70,6 +71,7 @@ function includeElement(file, elementClass, targetId) {
                 clonedContent.querySelectorAll("script").forEach(script => script.remove());
 
                 document.getElementById(targetId).innerHTML = clonedContent.innerHTML;
+                console.log("elementClass >> ",elementClass)
             } else {
                 console.error("Elemento with class '" + elementClass + "' not found in " + file);
             }
@@ -77,5 +79,9 @@ function includeElement(file, elementClass, targetId) {
         .catch(error => {
             console.error("Errore nel caricamento del file:", error);
         });
+}
+
+function testCalling(){
+    console.log("It has been called")
 }
 
