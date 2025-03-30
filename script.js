@@ -81,27 +81,66 @@ function includeElement(file, elementClass, targetId) {
 }
 
 /* Function to add class to selected element when scrolling over a target element */
-function scrollHighlight(targetId,affectedId,classSelected) {
+function scrollHighlight(targetId,affectedId,classSelected,whereToUse) { // new - whereToUse to handle DEFAULT when on top - not extremely needed but helps to deal with small sections on top
     /* IF is needed to check that imported ids have already been uploaded, avoiding to use a loop or unprecise setTimeout */
     if (document.getElementById(targetId) && document.getElementById(affectedId)) {
         const targetSection = document.getElementById(targetId);
         const affectedSection = document.getElementById(affectedId);
-    
+
+        
         function checkScroll() {
             const rect = targetSection.getBoundingClientRect();
+            const scrollTop = window.scrollY; // new
+
+            if (scrollTop >= 0 && scrollTop <= 4) { // new - select default based on where to use it -- to much hardcoded, to improve
+                resetAllButtons(classSelected);
+                if (whereToUse === "sidebar"){
+                    document.getElementById("left-home-general").classList.add(classSelected);
+                    return;
+                }
+                if (whereToUse === "projects"){
+                    document.getElementById("pj1").classList.add(classSelected);
+                    return;
+                }
+                if (whereToUse === "certifications"){
+                    document.getElementById("cert1").classList.add(classSelected);
+                    return;
+                }
+            }
 
             if (rect.top <= window.innerHeight * 0.55 && rect.bottom >= window.innerHeight * 0.55) {
                 if (!affectedSection.className.includes(classSelected)) {
+                    resetAllButtons(classSelected); // new
                     affectedSection.className += " " + classSelected;
                 }
             } else {
                 affectedSection.classList.remove(classSelected);
             }
         }
+        
+        function resetAllButtons(classSelected) { // new - select default based on where to use it -- to much hardcoded, to improve
+            if (whereToUse === "sidebar"){
+                document.querySelectorAll(".btn-sidebar").forEach(el => {
+                    const parentLink = el.closest("a");
+                    parentLink.classList.remove(classSelected);
+                });
+            }
+            if (whereToUse === "projects"){
+                document.querySelectorAll(".project-cards").forEach(el => {
+                    el.classList.remove(classSelected);
+                });
+            }
+            if (whereToUse === "certifications"){
+                document.querySelectorAll(".project-cards").forEach(el => {
+                    el.classList.remove(classSelected);
+                });
+            }
+        }
     
         window.addEventListener("scroll", checkScroll);
+
     } else {
-        setTimeout(()=>{  scrollHighlight(targetId,affectedId,classSelected)  },100)
+        setTimeout(()=>{  scrollHighlight(targetId,affectedId,classSelected,whereToUse)  },100)
     }
 }
 

@@ -10,7 +10,9 @@ body {
     background-position: center;
     background-attachment: fixed;
 
-    /*overflow-x: hidden;*/
+    /* to center */
+    justify-content: center;
+    overflow-x: hidden;
 
     /*
     background-color: rgb(0, 0, 0);
@@ -113,9 +115,14 @@ body {
     background-color: rgba(35, 49, 83, 0.5);
     border-radius: 5px;
 }
-/*.home-project-card-colors:hover .project-arrow{
+/*.home-project-card-colors:hover .slide-right-arrow{
     transform: translate(5px, -5px);
 }*/
+.to-slide:hover .slide-right-arrow {
+    color: #DF7925;
+    transform: translateX(5px);
+    transition: transform 0.3s ease-in-out;
+}
 
 
 
