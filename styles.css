@@ -38,11 +38,25 @@ body {
 .darker-white { /* same as body */
     color: rgb(148, 163, 184);
 }
+
 .lighter-grey {
     color: rgb(100, 116, 139);
 }
+.grey-bg-detail {
+    background-color:rgba(125, 125, 125, 0.5);;
+}
+.medium-grey-bg-detail {
+    background-color:rgba(39, 39, 39, 0.85);;
+}
 .dark-grey-bg-detail {
     background-color:rgba(24, 24, 24, 0.85);;
+}
+
+.orange-detail {
+    color: #DF7925;
+}
+.orange-detail-80 {
+    color:rgb(223, 121, 37, 0.8);
 }
 
 
@@ -68,7 +82,7 @@ body {
 
 /* Cards */
 .card {
-    transition: 0.3s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 
 .card:hover {
@@ -119,38 +133,12 @@ body {
     transform: translate(5px, -5px);
 }*/
 .to-slide:hover .slide-right-arrow {
-    color: #DF7925;
+    color: #DF7925; /* equal orange-detail */
     transform: translateX(5px);
     transition: transform 0.3s ease-in-out;
 }
 
-
-
-
-.orange-detail {
-    color: #DF7925;
-}
-.white-bg-detail {
-    background-color:rgba(238, 236, 236, 0.85);;
-}
-.grey-bg-detail {
-    background-color:rgba(125, 125, 125, 0.5);;
-}
-.medium-grey-bg-detail {
-    background-color:rgba(39, 39, 39, 0.85);;
-}
-.black-bg-detail {
-    background-color:rgba(21, 21, 21, 0.8);;
-}
-
-
-.light-orange-detail {
-    background-color: #f4eeeb;
-}
-.medium-orange-detail {
-    background-color: #f5ded3;
-}
-
+/* Text and Fonts */
 .titles-size {
     font-weight: 900;
     font-size: 5.5rem;

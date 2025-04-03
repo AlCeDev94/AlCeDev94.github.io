@@ -144,6 +144,35 @@ function scrollHighlight(targetId,affectedId,classSelected,whereToUse) { // new 
     }
 }
 
+
+/* Customize Cursor */
+// Creation element to be used for effect
+const cursorEffect = document.createElement("div");
+document.body.appendChild(cursorEffect);
+
+// Add style to element
+Object.assign(cursorEffect.style, {
+    position: "fixed",
+    //width: "650px",
+    //height: "650px",
+    width: "45em",
+    height: "45em",
+    background: "radial-gradient(circle, rgba(33, 65, 207, 0.12) 10%, rgba(44, 57, 89, 0) 80%)",
+    borderRadius: "50%",
+    pointerEvents: "none",
+    transform: "translate(-50%, -50%)",
+    transition: "transform 0.1s ease-out",
+});
+
+// Follow cursor
+document.addEventListener("mousemove", (e) => {
+    cursorEffect.style.left = `${e.clientX}px`;
+    cursorEffect.style.top = `${e.clientY}px`;
+});
+
+
+
+/* Testing utilities */
 function testCalling(){
     console.log("It has been called")
 }
