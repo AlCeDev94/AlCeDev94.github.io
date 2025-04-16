@@ -35,6 +35,9 @@ body {
 .medium-white {
     color: rgb(203, 213, 225);
 }
+.dark-medium-white {
+    color: rgb(184, 197, 214);
+}
 .darker-white { /* same as body */
     color: rgb(148, 163, 184);
 }

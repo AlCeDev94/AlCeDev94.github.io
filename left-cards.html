@@ -50,14 +50,16 @@
     <div id="pj2" class="row project-cards py-3 mb-5">
         <a href="project-base.html#project-2">
             <div class="card-body text-center">
-                <h3 class="fw-bold lighter-white ">Smart Wallet Multi-Signature</h3>
-                <p class="card-text mb-3 fs-5">Smart wallet connected to metamask with multi-signature required system to approve a transaction.</p>
+                <h3 class="fw-bold lighter-white ">Wallet Multi-Signature</h3>
+                <p class="card-text mb-3 fs-5">Wallet connected to metamask with multi-signature required system to approve a transaction.</p>
             </div>
             <!-- labels? problema che non sarebbero quelle del progetto specifico --- posso provare a farle sticky in parallelo, ossia fino a quando certa sezione rimane questo poi passa al successivo , stile sidebar? -->
             <div class="col-12 d-flex flex-wrap overflow-hidden justify-content-center gap-1">
                 <div id="solidity-btn-1"></div>
                 <div id="javascript-btn-1"></div>
                 <div id="react-btn-1"></div>
+                <div id="ethersjs-btn-1"></div>
+                <div id="hardhat-btn-1"></div>
                 <div id="metamask-btn-1"></div>
             </div>
         </a>
@@ -91,6 +93,8 @@
     includeElement("components.html", ".solidity-btn", "solidity-btn-1");
     includeElement("components.html", ".javascript-btn", "javascript-btn-1");
     includeElement("components.html", ".react-btn", "react-btn-1");
+    includeElement("components.html", ".ethersjs-btn", "ethersjs-btn-1");
+    includeElement("components.html", ".hardhat-btn", "hardhat-btn-1");
     includeElement("components.html", ".metamask-btn", "metamask-btn-1");
 
     includeElement("components.html", ".solidity-btn", "solidity-btn-2");
